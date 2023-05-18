@@ -1,0 +1,13 @@
+2023-05-17 18:35:10.790 -05 [13631] LOG:  starting PostgreSQL 14.7 (Homebrew) on x86_64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.202), 64-bit
+2023-05-17 18:35:10.793 -05 [13631] LOG:  listening on IPv6 address "::1", port 5432
+2023-05-17 18:35:10.793 -05 [13631] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-05-17 18:35:10.797 -05 [13631] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-05-17 18:35:10.855 -05 [13632] LOG:  database system was interrupted; last known up at 2023-01-31 15:51:54 -05
+2023-05-17 18:35:12.250 -05 [13632] LOG:  database system was not properly shut down; automatic recovery in progress
+2023-05-17 18:35:12.278 -05 [13632] LOG:  redo starts at 0/103170A0
+2023-05-17 18:35:12.278 -05 [13632] LOG:  invalid record length at 0/10317188: wanted 24, got 0
+2023-05-17 18:35:12.278 -05 [13632] LOG:  redo done at 0/10317150 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2023-05-17 18:35:12.314 -05 [13631] LOG:  database system is ready to accept connections
+2023-05-17 22:06:01.464 -05 [19977] ERROR:  column "number" does not exist at character 40
+2023-05-17 22:06:01.464 -05 [19977] HINT:  Perhaps you meant to reference the column "users.name".
+2023-05-17 22:06:01.464 -05 [19977] STATEMENT:  SELECT "users".* FROM "users" ORDER BY number DESC LIMIT $1 OFFSET $2
