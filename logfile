@@ -11,3 +11,8 @@
 2023-05-17 22:06:01.464 -05 [19977] ERROR:  column "number" does not exist at character 40
 2023-05-17 22:06:01.464 -05 [19977] HINT:  Perhaps you meant to reference the column "users.name".
 2023-05-17 22:06:01.464 -05 [19977] STATEMENT:  SELECT "users".* FROM "users" ORDER BY number DESC LIMIT $1 OFFSET $2
+2023-05-18 08:01:11.247 -05 [25112] ERROR:  operator does not exist: character varying == unknown at character 55
+2023-05-18 08:01:11.247 -05 [25112] HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2023-05-18 08:01:11.247 -05 [25112] STATEMENT:  SELECT "rankings".* FROM "rankings" WHERE (start_date == '2023-05-01' OR start_date == '2023-05-30')
+2023-05-18 20:49:27.666 -05 [51507] FATAL:  lock file "postmaster.pid" already exists
+2023-05-18 20:49:27.666 -05 [51507] HINT:  Is another postmaster (PID 13631) running in data directory "/usr/local/var/postgres"?

@@ -14,6 +14,11 @@ gem "puma", "~> 5.0"
 
 gem 'will_paginate', '~> 3.3'
 
+gem 'rabl'
+gem 'oj'
+gem 'jwt'
+gem 'bcrypt', '~> 3.1.7'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 

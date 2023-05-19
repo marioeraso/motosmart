@@ -3,18 +3,18 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # resources :users, param: :_username
+  # post '/auth/login', to: 'authentication#login'
+  # get '/*a', to: 'application#not_found'
   namespace :api do
     namespace :v1 do
       get '/ranking/current', to: 'rankings#index'
-      get '/ranking/year/month', to: 'rankings#example'
-      # resources :usert, only: [:index, :create]
+      get '/ranking/year/month', to: 'rankings#ranking_filter'
+      post '/ranking/record', to: 'rankings#create_record'
 
-      # resources :rankings do
-      #   member do
-      #     get :current
-      #   end
-      # end
-      
+      resources :users, param: :_username
+      post '/auth/login', to: 'authentication#login'
+      get '/*a', to: 'application#not_found'
     end
   end
 end
