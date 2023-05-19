@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  
+  after_create :set_uuid
   has_many :records
   has_many :rankings, through: :records
 
@@ -11,4 +11,9 @@ class User < ApplicationRecord
   validates :password_digest,
             length: { minimum: 6 },
             if: -> { new_record? || !password_digest.nil? }
+
+  def set_uuid
+    self.uuid ||= SecureRandom.uuid
+    true
+  end          
 end
